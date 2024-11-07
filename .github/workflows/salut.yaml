@@ -4,7 +4,7 @@ on: [push] # Ce workflow se déclenche sur un push dans le dépôt
 jobs:
   Salutations: # Nom du job : Salutations
     name: Salutations
-    runs-on: ubuntu-latest # OS où s'exécute le job
+    runs-on: ubuntu-latest
     steps:
       - name: Hello #une tâche pour saluer
         env:
