@@ -50,7 +50,11 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.ajout(3);
         assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
     }
-
+    @Test
+    void modifiePremierVide(){
+       listeATester.modifiePremier(1, 2);
+       assertEquals("ListeSimple()", listeATester.toString());
+    }
     @Test
      void modifiePremier() {
         listeATester.ajout(1);

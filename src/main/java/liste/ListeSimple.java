@@ -15,8 +15,6 @@ public class ListeSimple {
 
     public void modifiePremier(Object element, Object nouvelleValeur) {
         Noeud courant = tete;
-        if (courant == null)
-            return;
 
         while (courant != null && !courant.getElement().equals(element))
             courant = courant.getSuivant();
