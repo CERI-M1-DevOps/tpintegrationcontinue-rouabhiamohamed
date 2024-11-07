@@ -83,11 +83,13 @@ import static org.junit.jupiter.api.Assertions.*;
         assertEquals(0, listeATester.getSize());
     }
     @Test
-    void supprimePremierAvecNull() {
-       listeATester.ajout(null);
-       listeATester.supprimePremier(null);
-       assertNull(listeATester.tete);
-       assertEquals(0, listeATester.getSize());
+    void supprimePremierElementInexistant() {
+       listeATester.ajout(1);
+       listeATester.ajout(2);
+       listeATester.ajout(3);
+       listeATester.supprimePremier(4);
+       assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+       assertEquals(3, listeATester.getSize());
     }
 
 
