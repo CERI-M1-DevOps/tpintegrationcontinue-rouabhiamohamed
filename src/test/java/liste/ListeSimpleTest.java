@@ -68,7 +68,7 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.ajout(1);
         listeATester.ajout(1);
         listeATester.modifieTous(1, 4);
-        assertEquals(listeATester.toString(), "ListeSimple(Noeud(4), Noeud(4), Noeud(2), Noeud(4))");
+        assertEquals( "ListeSimple(Noeud(4), Noeud(4), Noeud(2), Noeud(4))",listeATester.toString());
         assertEquals(4, listeATester.tete.getSuivant().getElement());
     }
 
@@ -208,7 +208,7 @@ import static org.junit.jupiter.api.Assertions.*;
         listeATester.ajout(2);
         listeATester.ajout(3);
         listeATester.inverser();
-        assertEquals(listeATester.toString(), "ListeSimple(Noeud(1), Noeud(2), Noeud(3))");
+        assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3))",listeATester.toString());
     }
 
     @Test
