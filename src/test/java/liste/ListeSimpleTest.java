@@ -75,6 +75,19 @@ import static org.junit.jupiter.api.Assertions.*;
        assertEquals("ListeSimple(Noeud(3), Noeud(1))", listeATester.toString());
        assertEquals(2, listeATester.getSize());
     }
+    @Test
+    void echangerNoeudsIdentiques() {
+       listeATester.ajout(5);
+       listeATester.ajout(4);
+       listeATester.ajout(3);
+       listeATester.ajout(2);
+       listeATester.ajout(1);
+       Noeud r1 = listeATester.tete.getSuivant().getSuivant();
+       Noeud r2 = r1;
+       assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(4), Noeud(5))", listeATester.toString());
+       listeATester.echanger(r1, r2);
+       assertEquals("ListeSimple(Noeud(1), Noeud(2), Noeud(3), Noeud(4), Noeud(5))", listeATester.toString());
+    }
 
 
     @Test
