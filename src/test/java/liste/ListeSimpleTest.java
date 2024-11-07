@@ -82,6 +82,14 @@ import static org.junit.jupiter.api.Assertions.*;
         assertNull(listeATester.tete);
         assertEquals(0, listeATester.getSize());
     }
+    @Test
+    void supprimePremierAvecNull() {
+       listeATester.ajout(null);
+       listeATester.supprimePremier(null);
+       assertNull(listeATester.tete);
+       assertEquals(0, listeATester.getSize());
+    }
+
 
     @Test
      void supprimePremierEnPremierePosition() {
