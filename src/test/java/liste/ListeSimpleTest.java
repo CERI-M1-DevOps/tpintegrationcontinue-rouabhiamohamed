@@ -56,15 +56,26 @@ import static org.junit.jupiter.api.Assertions.*;
        assertEquals("ListeSimple()", listeATester.toString());
     }
     @Test
-    void supprimePremierElementEnTete() {
+    void supprimePremierElementInexistant() {
        listeATester.ajout(1);
        listeATester.ajout(2);
        listeATester.ajout(3);
        assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
-       listeATester.supprimePremier(3);
-       assertEquals("ListeSimple(Noeud(2), Noeud(1))", listeATester.toString());
+       listeATester.supprimePremier(4);
+       assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+       assertEquals(3, listeATester.getSize());
+    }
+    @Test
+    void supprimePremierElementTrouve() {
+       listeATester.ajout(1);
+       listeATester.ajout(2);
+       listeATester.ajout(3);
+       assertEquals("ListeSimple(Noeud(3), Noeud(2), Noeud(1))", listeATester.toString());
+       listeATester.supprimePremier(2);
+       assertEquals("ListeSimple(Noeud(3), Noeud(1))", listeATester.toString());
        assertEquals(2, listeATester.getSize());
     }
+
 
     @Test
      void modifiePremier() {
